@@ -1,0 +1,29 @@
+{
+  "name": "demochat",
+  "version": "1.0.0",
+  "description": "- JQuery\r - Node JS\r - Socket IO\r - Express JS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntrong0603/NodeJSSoketIO.git"
+  },
+  "author": "NTrong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntrong0603/NodeJSSoketIO/issues"
+  },
+  "homepage": "https://github.com/ntrong0603/NodeJSSoketIO#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}

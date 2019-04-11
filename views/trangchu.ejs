@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Chat Socket IO</title>
+
+        <script src="/js/jquery.js"></script>
+        <!--thu vien co san sau khi cai socket io de khach hang ket noi len server-->
+        <script src="socket.io/socket.io.js"></script>
+
+        <!-- -->
+        <script>    
+            //code ket noi len server
+            var socket = io("http://localhost:3000");
+            socket.on('Server-send-data', function (data) {
+                $("#noidung").append(data + ",");
+            });
+            $(document).ready(function(){
+                $("#mrA").click(function(){
+                    socket.emit("Client-send-data", "Hello");//khai bao 2 tham so: ten emit, gia tri
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h2 id="noidung">
+
+        </h2>
+        <div id="mrA">
+            CLick send
+        </div>
+    </body>
+</html>
